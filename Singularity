@@ -1,7 +1,8 @@
 BootStrap: docker
 From: continuumio/anaconda3
 
-%setup ${SINGULARITY_ROOTFS}/opt/specfiles
+%setup 
+     mkdir -p ${SINGULARITY_ROOTFS}/opt/specfiles
 %files
      DM.spec /opt/specfiles/DM.spec
 %runscript
